@@ -6,20 +6,20 @@ import Home from './Home.vue';
 
 <template>
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <HelloWorld msg="Welcome to Vue" />
-    </div>
+    </div> -->
   </header>
 
   <main>
-    <TheWelcome />
+    <!-- <TheWelcome /> -->
   </main>
   <Home/>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 header {
   line-height: 1.5;
 }
@@ -46,4 +46,4 @@ header {
     flex-wrap: wrap;
   }
 }
-</style>
+</style> -->
