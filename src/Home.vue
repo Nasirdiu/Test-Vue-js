@@ -1,6 +1,7 @@
 <template>
     <div class="main">
-        <h1 class="green" v-if="show">Welcome to Vue</h1>
+        <h1  v-if="show">Welcome to Vue</h1>
+        <h1 class="green" v-else>Nasir Uddin</h1>
         <button v-on:mouseover="hello('data')">Count</button>
         <button v-on:click="display">Toogle</button>
     </div>
