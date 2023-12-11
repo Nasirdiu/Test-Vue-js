@@ -7,7 +7,7 @@ const people = [
     },
     {
         image:'https://images.generated.photos/dVrq4AXS8SmlQ_HTyxG4bJRmi4IulUA4omUbvvSyQMU/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDkwODEzLmpwZw.jpg',
-        name: 'John Doe',
+        name: 'Jeme Doe',
         designation: 'CTO, Doe Corporation',
         location: '2970 Duke Lane, Brunswick, New Jersey'
     },
@@ -18,3 +18,5 @@ const people = [
         location: '3679 Elk Street, Denver, Colorado'
     }
 ]
+
+export default people;
