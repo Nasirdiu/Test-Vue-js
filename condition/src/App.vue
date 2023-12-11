@@ -57,9 +57,15 @@ const items = ["New York", "London", "Paris", "Tokyo"]
     </section>
 
     <!-- loop  -->
-    <section class="mt-10 grid grid-cols-1 md:grid-cols-6">
-       <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(item,index) in items">{{index+1}}.{{ item }}</div>  
-      <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(n, index) in 100">{{ index }}.{{ n }}</div>
+
+    <section class="mt-10 ">
+      <h1 class="text-red-600 text-3xl text-center mb-10">Loop</h1>
+      <div class="grid grid-cols-1 md:grid-cols-6">
+        <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(item, index) in items" :key="item">{{ index + 1 }}.{{ item }}
+        </div>
+        <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(n, index) in 100">{{ index }}.{{ n }}</div>
+      </div>
+
     </section>
   </section>
 </template>
