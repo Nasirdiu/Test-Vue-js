@@ -1,5 +1,8 @@
 <script setup>
 import people from './data/data';
+
+const animal='Female'
+const searchUrl='https://www.pexels.com/search/'
 </script>
 
 <template>
@@ -28,6 +31,12 @@ import people from './data/data';
                 </div>
             </section>
         </section>
+
+       <div class="mt-20">
+        <h1 style="text-align:center;margin:40px 0px;font-size:40px">Search Photo Name</h1>
+        <a target="_blank" :href="searchUrl+animal">Searc For {{ animal }}</a> <br>
+        <a target="_blank" :href="`https://www.pexels.com/search/${animal.toLowerCase()}`">Searc For {{ animal }}</a>
+       </div>
     </section>
 </template>
 
