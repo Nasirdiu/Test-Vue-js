@@ -4,24 +4,26 @@ const weather = 's'
 
 const weekday = true
 
-const colors={
-  bgColor:'bg-teal-100',
-  borderColor:'border-teal-500',
-  textColor:'text-teal-900'
+const colors = {
+  bgColor: 'bg-teal-100',
+  borderColor: 'border-teal-500',
+  textColor: 'text-teal-900'
 }
 
-const messageType=''
+const messageType = ''
 
-if('error'==messageType){
-  colors.borderColor='bg-red-100'
-  colors.bgColor='bg-red-500'
-  colors.textColor='bg-red-900'
+if ('error' == messageType) {
+  colors.borderColor = 'bg-red-100'
+  colors.bgColor = 'bg-red-500'
+  colors.textColor = 'bg-red-900'
 }
-if('warning'==messageType){
-  colors.borderColor='bg-orange-100'
-  colors.bgColor='bg-orange-500'
-  colors.textColor='bg-orange-900'
+if ('warning' == messageType) {
+  colors.borderColor = 'bg-orange-100'
+  colors.bgColor = 'bg-orange-500'
+  colors.textColor = 'bg-orange-900'
 }
+
+const items = ["New York", "London", "Paris", "Tokyo"]
 </script>
 
 <template>
@@ -46,11 +48,18 @@ if('warning'==messageType){
     </section>
 
     <section class="mt-10">
-      <div class="border-t-4 rounded-b px-4 py-3 shadow-md" :class="[colors.bgColor,colors.borderColor,colors.textColor]">
+      <div class="border-t-4 rounded-b px-4 py-3 shadow-md"
+        :class="[colors.bgColor, colors.borderColor, colors.textColor]">
         <p class="font-bold">Our privacy policy has change</p>
         <p class="text-sm">make sure you know how these chasge affect you.</p>
 
       </div>
+    </section>
+
+    <!-- loop  -->
+    <section class="mt-10 grid grid-cols-1 md:grid-cols-6">
+       <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(item,index) in items">{{index+1}}.{{ item }}</div>  
+      <div class="box-content h-32 w-32 p-4 border-4 text-center" v-for="(n, index) in 100">{{ index }}.{{ n }}</div>
     </section>
   </section>
 </template>
