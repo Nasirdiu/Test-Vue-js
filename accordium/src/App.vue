@@ -1,35 +1,45 @@
 <script setup>
+import { ref } from 'vue';
 
+
+const fullImage = ref('https://kartinkof.club/uploads/posts/2022-09/1662240057_44-kartinkof-club-p-novie-i-krasivie-kartinki-loshadka-48.jpg');
+
+const images = [
+  {
+    thumb: 'https://kartinkof.club/uploads/posts/2022-09/1662240057_44-kartinkof-club-p-novie-i-krasivie-kartinki-loshadka-48.jpg',
+    full: 'https://kartinkof.club/uploads/posts/2022-09/1662240057_44-kartinkof-club-p-novie-i-krasivie-kartinki-loshadka-48.jpg'
+  },
+  {
+    thumb: 'https://setroom.ru/wp-content/uploads/sites/15/2022/02/s1200.jpg',
+    full: 'https://setroom.ru/wp-content/uploads/sites/15/2022/02/s1200.jpg'
+  },
+  {
+    thumb: 'https://img.desktopwallpapers.ru/animals/pics/49-1024.jpg',
+    full: 'https://img.desktopwallpapers.ru/animals/pics/49-1024.jpg'
+  },
+  {
+    thumb: 'https://krasivosti.pro/uploads/posts/2021-03/1616296238_11-p-belaya-loshadka-14.jpg',
+    full: 'https://krasivosti.pro/uploads/posts/2021-03/1616296238_11-p-belaya-loshadka-14.jpg'
+  }
+]
+function setImage(image) {
+  fullImage.value = image.full
+}
 </script>
 
 <template>
-  <section>
+  <section class="container mx-auto flex items-center flex-col">
+    <h1 class="text-center text-2xl py-10">Events & Reactiviy</h1>
+    <div>
+      <div class="flex space-x-2">
+        <img @click="setImage(image)" class="cursor-pointer w-50 h-40" v-for="image in images" :key="image.thumb" :src="image.thumb" alt="">
 
-    <div id="accordion-collapse" data-accordion="collapse">
-      <h2 id="accordion-collapse-heading-1">
-        <button type="button"
-          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-          data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-          aria-controls="accordion-collapse-body-1">
-          <span>What is Flowbite?</span>
-          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 5 5 1 1 5" />
-          </svg>
-        </button>
-      </h2>
-      <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-          <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components
-            built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-          <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
-              href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get
-              started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-        </div>
+      </div>
+      <div class="mt-10">
+        <h1 class="mb-10 text-2xl font-bold">Change Horse</h1>
+        <img class="cursor-pointer w-full pl-80 pr-80 " :src="fullImage" alt="">
       </div>
     </div>
-
   </section>
 </template>
 
