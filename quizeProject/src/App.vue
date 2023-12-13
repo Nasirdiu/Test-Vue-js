@@ -1,32 +1,47 @@
 <script setup>
 import { reactive, ref } from 'vue';
 
-const displayImage = ref(true);
+const saarcCountries = reactive([
+  { name: "Bangladesh", capital: "Dhaka" },
+  { name: "Nepal", capital: "Katmoandu" },
+  { name: "Bhutan", capital: "Thimpu" },
+  { name: "Sril Lanka", capital: "Colombo" },
+  { name: "India", capital: "New Delhi" },
+  { name: "Pakistan", capital: "Islamabad" },
+  { name: "Maldives", capital: "Male" },
+])
 
+const capitals = ['Dhaka', "Katmoandu", "Thimpu", "Colombo", "New Delhi", "Islamabad", "Male"]
+
+
+
+function getRandomCapitals() {
+  return capitals;
+  // return capitals.sort(() => Math.random() - 0.5)
+}
+function getScore() {
+  let score = 0;
+  saarcCountries.forEach(country => {
+    if (country.answer === country.capital) {
+      score++;
+    }
+  })
+  return score
+}
 </script>
 
 <template>
-  <section class="container mx-auto ">
+  <section class="mx-auto container text-left">
     <h1 class="text-2xl mb-10">Vue Form</h1>
-    <img src="" alt="">
-    <p class="mb-10"> {{ displayImage }}</p>
-    <div class="flex items-center mb-4">
-      <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Display Random Image</label>
-      <input  type="checkbox" class="ml-2" v-model="displayImage">
-
-        <p class="mt-20">
-          <input  type="radio" name="display" :value="true" v-model="displayImage"> On <br>
-          <input type="radio" name="display" :value="false" v-model="displayImage"> Off <br>
-
-        </p>
+    <p class="mb-10">{{ saarcCountries }}</p>
+    <p>Your Score:{{ getScore() }}</p>
+    <div class="my-5 border border-gray-400 p-5" v-for="(country, index) in saarcCountries" :key="country.name">
+      <p>What is the capital of {{ country.name }}?</p>
+      <template v-for="capital in getRandomCapitals()">
+        <input type="radio" :name="country.name" :value="capital" v-model="country.answer" />
+        <label for="" class="ml-2 mr-2">{{ capital }}</label>
+      </template>
     </div>
-
-   <div>
-    <img v-show="displayImage" class="mt-10 mx-auto w-[500px]"
-      :src="`https://source.unsplash.com/random?version=${Math.random()}`" alt="">
-   </div>
-
-
   </section>
 </template>
 
