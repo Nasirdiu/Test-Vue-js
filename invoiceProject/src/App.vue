@@ -117,10 +117,10 @@ function addMoreItem() {
       <button @click="addMoreItem()" class="mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
         Add More
       </button>
-      <button class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+      <button @click="Object.assign(data,invoice1)" class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
         Load Invoice 1
       </button>
-      <button class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+      <button @click="Object.assign(data,invoice2)" class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
         Load Invoice 2
       </button>
       <p class="mt-5">
@@ -154,6 +154,7 @@ function addMoreItem() {
           </div>
         </div>
       </div>
+      <h1 class="text-2xl text-red-500">Nasir369</h1>
     </div>
 
   </section>
