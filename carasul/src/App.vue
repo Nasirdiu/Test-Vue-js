@@ -39,7 +39,7 @@ onMounted(() => {
     <div class="my-10 ml-72">
       <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="username" type="text" placeholder="Username" v-model="newItem">
+        id="username" type="text" placeholder="Image Url" v-model="newItem">
 
       <button @click="addNewItem()"
         class=" mt-5 ml-40 bg-blue-500 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded">Add Item</button>
