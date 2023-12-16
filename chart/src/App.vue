@@ -1,30 +1,42 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { onMounted, ref } from "vue";
+
+const newItem = ref(16);
+
+let chart = null;
+
+const data = {
+  labels: ["Red", "Blue", "Yellow"],
+  datasets: [
+    {
+      label: "My First Dataset",
+      data: [300, 50, 100],
+      backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"],
+      hoverOffset: 4,
+    },
+  ],
+};
+const config = {
+  type: "pie",
+  data: data,
+};
+onMounted(() => {
+  const ctx = document.getElementById("chart");
+  chart = new chart(ctx, config);
+}),
+  function updateChart() {
+    dataset.push(newItem.value);
+  };
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="mx-auto w-[400px] h-[400px] bg-gray-400">
+    <canvas id="Chart"></canvas>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <div class="mt-20">
+    <input type="text" v-model="newItem" />
+    <button @click="updateChart()" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">Add</button>
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
