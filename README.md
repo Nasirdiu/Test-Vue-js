@@ -9,6 +9,12 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Recommended  Setup
 
-- [git clone](#git clone)
-- [npm install ](#npm install )
-- [npm run dev](#npm run dev)
+## git clone 
+## npm install 
+## npm run dev
+
+## Profile Link 
+
+- [VS Code](https://nasir369.netlify.app/).
+
+
