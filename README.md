@@ -15,6 +15,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Profile Link 
 
-- [VS Code](https://nasir369.netlify.app/).
+- [Nasir369](https://nasir369.netlify.app/).
 
 
