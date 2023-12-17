@@ -12,3 +12,14 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## git clone 
 ## npm install 
 ## npm run dev
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+- **Credits**: Acknowledgment of contributors or resources used.
+- **FAQ**: Frequently Asked Questions.
+- **Support**: How to get support or contact information.
