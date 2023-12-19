@@ -12,9 +12,8 @@ import Footer from './components/Footer.vue';
     <router-view></router-view>
   </main>
 
-<section class="bg-black text-white">
-  <Footer></Footer>
-</section>
- 
+  <section class="bg-black text-white">
+    <Footer></Footer>
+  </section>
 </template>
 <style scoped></style>

@@ -16,6 +16,11 @@ const routes = [
         name:'blog'
     },
     {
+        path: '/blog/tag/:tag',
+        component: Blog,
+        name:'tag'
+    },
+    {
         path: '/about',
         component: About
     },

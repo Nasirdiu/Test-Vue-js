@@ -1,8 +1,15 @@
 <script setup>
+import {ref} from 'vue'
+import {useRoute} from 'vue-router'
+const route=useRoute()
 
+const tag=ref(route.params.tag)
 </script>
 
 <template>
+    <div>
+    {{ tag }}
+    </div>
     <section class="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100">
         <div class="container p-6 mx-auto space-y-8">
             <div class="space-y-2 text-center">
