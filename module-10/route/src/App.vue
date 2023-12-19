@@ -9,7 +9,7 @@ import Footer from './components/Footer.vue';
   </header>
 
   <main>
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
   </main>
 
   <section class="bg-black text-white">
