@@ -7,6 +7,9 @@ const AuthState = reactive({
     user: null,
     username: null,
     password: null,
+    login(){
+        console.log({username:this.username,password:this.password});
+    }
 });
 
 export default AuthState
