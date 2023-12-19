@@ -1,6 +1,5 @@
 <script setup>
 import Nav from './components/Nav.vue';
-import Home from './components/Home.vue';
 </script>
 
 <template>
@@ -31,6 +30,7 @@ import Home from './components/Home.vue';
       </button>
     </div>
   </header>
-  <Home></Home>
+  <router-view ></router-view>
+ 
 </template>
 <style scoped></style>
