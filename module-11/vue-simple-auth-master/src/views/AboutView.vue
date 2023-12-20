@@ -1,5 +1,10 @@
+
+<script setup>
+import AuthState from '../data/authstate';
+</script>
+
 <template>
-  <div class="py-14">
+  <div class="py-14" v-if="AuthState.isAuthenticated"> 
     <div class="max-w-screen-xl mx-auto px-4 md:px-8">
       <div class="max-w-xl mx-auto text-center">
         <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">About Us</h3>
