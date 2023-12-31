@@ -23,22 +23,35 @@ async function list() {
                         <thead class="bg-white border-b">
                             <tr>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                    #
+                                    No
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                    First
+                                    Id
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                    Last
+                                    ProductName
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                    Handle
+                                    ProductCode
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                    UnitPrice
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                    Qty
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                    TotalPrice
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                    CreatedDate
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for=" item in tableData" class="bg-gray-100 border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                            <tr v-for=" (item, index) in tableData" :key="index" class="bg-gray-100 border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ index + 1 }}
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     {{ item['_id'] }}
                                 </td>
@@ -56,6 +69,9 @@ async function list() {
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     {{ item['TotalPrice'] }}
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    {{ item['CreatedDate'] }}
                                 </td>
                             </tr>
                         </tbody>
